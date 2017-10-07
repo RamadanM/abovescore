@@ -23,13 +23,13 @@ class Charts extends Component {
     return (
     <div style={{display:'flex',backgroundColor: 'ligthgray',marginLeft:'1%',marginTop:'1.5%'}}>
         
+
         <div style={{display:'inline-block',backgroundColor: 'white',width:'32%',position:'relative'}}>
             <div style={{padding:'.5%' ,display:'flex',width:'96%',height:'80%',marginLeft:'2%',marginTop:-10,position:'absolute', borderRadius: '1%'}}>
                   <SalesChart />
             </div>
             <div style={{marginTop:'35%',position:'relative'}}>
-              <h7 style={{ marginLeft:4 , display:'block',marginLeft: '3%'}}>Daily Sales</h7>
-              
+              <h7 style={{ marginLeft:4 , display:'block',marginLeft: '3%'}}>Completed Tasks</h7>
               <NavigationArrowUpward style={{display:'inline' , color: 'green',width:15 , height:15 ,display:'inline-block' , opacity:.5 , position:'relative' , marginLeft:5}} />
               <p style={{marginLeft:4, fontSize:10 ,display:'inline' }}>"55%"</p>
               <p style={{fontColor:'green' ,fontSize:10 ,display:'inline' }}> increase in today sales</p>
@@ -37,6 +37,27 @@ class Charts extends Component {
                     <div style={{bottom:0, position:'relative' , display:'block' }}>
                        <DeviceAccessTime style={{ width:15 , height:15 ,display:'inline-block' , opacity:.5 , position:'relative' , marginLeft:5}} />
                        <p style={{fontColor:'green' ,fontSize:10 ,display:'inline' ,opacity:.5}}> {"Updated 4 minutes ago"}</p>
+
+                    </div>
+            </div>                          
+        </div>
+
+
+
+
+
+        <div style={{marginLeft:'1%', display:'inline-block',backgroundColor: 'white',width:'32%',position:'relative'}}>
+            <div style={{padding:'.5%' ,display:'flex',width:'96%',height:'80%',marginLeft:'2%',marginTop:-10,position:'absolute', borderRadius: '1%'}}>
+                  <SalesChart />
+            </div>
+            <div style={{marginTop:'35%',position:'relative'}}>
+              <h7 style={{ marginLeft:4 , display:'block',marginLeft: '3%'}}>Daily Sales</h7>
+              
+              <p style={{marginLeft:'3%' ,fontColor:'green' ,fontSize:10 ,display:'inline' }}> Last campagine performance</p>
+                    <hr style={{opacity: .7}}/>
+                    <div style={{bottom:0, position:'relative' , display:'block' }}>
+                       <DeviceAccessTime style={{ width:15 , height:15 ,display:'inline-block' , opacity:.5 , position:'relative' , marginLeft:5}} />
+                       <p style={{fontColor:'green' ,fontSize:10 ,display:'inline' ,opacity:.5}}> {"Camapagine sent 2 day ago"}</p>
 
                     </div>
             </div>                          
@@ -50,14 +71,12 @@ class Charts extends Component {
                   <SalesChart />
             </div>
             <div style={{marginTop:'35%',position:'relative'}}>
-              <h7 style={{ marginLeft:4 , display:'block',marginLeft: '3%'}}>Daily Sales</h7>
-              <NavigationArrowUpward style={{display:'inline' , color: 'green',width:15 , height:15 ,display:'inline-block' , opacity:.5 , position:'relative' , marginLeft:5}} />
-              <p style={{marginLeft:4, fontSize:10 ,display:'inline' }}>"55%"</p>
-              <p style={{fontColor:'green' ,fontSize:10 ,display:'inline' }}> increase in today sales</p>
+              <h7 style={{ marginLeft:4 , display:'block',marginLeft: '3%'}}>Email Subscription</h7>
+              <p style={{marginLeft:'3%',fontColor:'green' ,fontSize:10 ,display:'inline' }}> Last campagine performance</p>
                     <hr style={{opacity: .7}}/>
                     <div style={{bottom:0, position:'relative' , display:'block' }}>
                        <DeviceAccessTime style={{ width:15 , height:15 ,display:'inline-block' , opacity:.5 , position:'relative' , marginLeft:5}} />
-                       <p style={{fontColor:'green' ,fontSize:10 ,display:'inline' ,opacity:.5}}> {"Updated 4 minutes ago"}</p>
+                       <p style={{fontColor:'green' ,fontSize:10 ,display:'inline' ,opacity:.5}}> {"capagine sent 2 day ago"}</p>
 
                     </div>
             </div>                          
@@ -66,23 +85,6 @@ class Charts extends Component {
 
 
 
-<div style={{marginLeft:'1%',display:'inline-block',backgroundColor: 'white',width:'32%',position:'relative'}}>
-            <div style={{padding:'.5%' ,display:'flex',width:'96%',height:'80%',marginLeft:'2%',marginTop:-10,position:'absolute', borderRadius: '1%'}}>
-                  <SalesChart />
-            </div>
-            <div style={{marginTop:'35%',position:'relative'}}>
-              <h7 style={{ marginLeft:4 , display:'block',marginLeft: '3%'}}>Daily Sales</h7>
-              <NavigationArrowUpward style={{display:'inline' , color: 'green',width:15 , height:15 ,display:'inline-block' , opacity:.5 , position:'relative' , marginLeft:5}} />
-              <p style={{marginLeft:4, fontSize:10 ,display:'inline' }}>"55%"</p>
-              <p style={{fontColor:'green' ,fontSize:10 ,display:'inline' }}> increase in today sales</p>
-                    <hr style={{opacity: .7}}/>
-                    <div style={{bottom:0, position:'relative' , display:'block' }}>
-                       <DeviceAccessTime style={{ width:15 , height:15 ,display:'inline-block' , opacity:.5 , position:'relative' , marginLeft:5}} />
-                       <p style={{fontColor:'green' ,fontSize:10 ,display:'inline' ,opacity:.5}}> {"Updated 4 minutes ago"}</p>
-
-                    </div>
-            </div>                          
-        </div>
 
 
 

@@ -13,9 +13,36 @@ import FileCloud from 'material-ui/svg-icons/file/cloud';
 import ActionCode from 'material-ui/svg-icons/action/code';
 import EditorModeEdit from 'material-ui/svg-icons/editor/mode-edit';
 import ContentClear from 'material-ui/svg-icons/content/clear';
+import IconButton from 'material-ui/IconButton';
+
 
 
 class Tables extends Component {
+  constructor(){
+    super();
+    this.state = {
+      tasks:[]
+    }
+  }
+
+  componentWillMount(){
+    fetch("http://172.17.0.1:5000/tasks", {
+      headers: {
+        Accept: "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(tasks => {this.setState({ tasks })} )
+      console.log(this.state.tasks);
+  }
+
+    handleDeletetask(id){
+    let tasks= this.state.tasks;
+    let index= tasks.findIndex(x => x.id === id);
+    tasks.splice(index,1);
+    this.setState({tasks: tasks});
+  }
+
   render() {
     return (
     <div style={{
@@ -70,12 +97,24 @@ class Tables extends Component {
 
                   <div style={{marginTop:'7%'}}>
                       <Table style={{marginTop:'1%'}}>
-                      <TableBody >
-                        <TableRow>
-                          <TableRowColumn style={{left: 0}} >"Here we have some quires"</TableRowColumn>
-                          <TableRowColumn > <ContentClear style={{float:'right'}} /> <EditorModeEdit style={{float:'right'}} /></TableRowColumn>
-                        </TableRow> 
-                     </TableBody>
+                      <TableBody>
+                        {this.state.tasks.map((task) => {
+                          return(
+                          <TableRow>
+                          <TableRowColumn  style={{left: 0}} >{task.title}</TableRowColumn>
+                          <TableRowColumn > 
+                             <IconButton onClick={this.handleDeletetask.bind(this)} tooltip="SVG Icon" style={{float:'right'}}>
+                                <ContentClear />
+                              </IconButton>
+                              <IconButton tooltip="SVG Icon" style={{float:'right'}}>
+                                <EditorModeEdit  />
+                              </IconButton>
+                          </TableRowColumn>
+                        </TableRow>
+                        );
+                        })
+                      }
+                      </TableBody>
                     </Table>
 
                   </div>

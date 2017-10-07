@@ -8,8 +8,10 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-fusioncharts": "^1.0.4",
+    "react-router": "^4.2.0",
     "react-scripts": "1.0.14",
-    "react-tap-event-plugin": "^3.0.2"
+    "react-tap-event-plugin": "^3.0.2",
+    "uuid": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
